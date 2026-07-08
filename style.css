@@ -1,0 +1,91 @@
+/* Custom Branding Palette */
+:root {
+    --main-pink: #e83e8c;
+    --light-pink: #fff0f5;
+    --dark-pink: #b82563;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #fafafa;
+}
+
+.bg-pink-light {
+    background-color: var(--light-pink);
+}
+
+.text-pink {
+    color: var(--main-pink);
+}
+
+.btn-pink {
+    background-color: var(--main-pink);
+    color: #fff;
+    border: none;
+}
+
+.btn-pink:hover {
+    background-color: var(--dark-pink);
+    color: #fff;
+}
+
+.btn-outline-pink {
+    color: var(--main-pink);
+    border-color: var(--main-pink);
+}
+
+.btn-outline-pink:hover {
+    background-color: var(--main-pink);
+    color: #fff;
+}
+
+.badge-pink {
+    background-color: var(--light-pink);
+    color: var(--dark-pink);
+    border: 1px solid var(--main-pink);
+}
+
+/* Nav Item Styling */
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--main-pink);
+    font-weight: bold;
+    border-bottom: 2px solid var(--main-pink);
+}
+
+/* Carousel Image Sizing */
+.carousel-img {
+    height: 450px;
+    object-fit: cover;
+}
+
+.bg-dark-trans {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Page Section Sizing for SPA */
+.page-section {
+    min-height: 75vh;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.style-faq {
+    max-width: 700px;
+}
+
+/* Animation Effect */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsivitas Layar Kecil (Mobile View) */
+@media (max-width: 768px) {
+    .carousel-img {
+        height: 250px;
+    }
+    .jumbotron h1 {
+        font-size: 2.2rem;
+    }
+}

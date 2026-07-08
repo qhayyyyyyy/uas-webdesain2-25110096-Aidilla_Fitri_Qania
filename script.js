@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 setTimeout(function () {
                     // Kembalikan ke state tombol semula setelah selesai kirim
                     submitBtn.disabled = false;
-                    btnText.textContent = "Kirim Pesan via Form";
+                    btnText.textContent = "Kirim Formulir Konsultasi";
                     btnLoading.classList.add('d-none');
 
                     // Tampilkan pesan sukses warna hijau di bawah form

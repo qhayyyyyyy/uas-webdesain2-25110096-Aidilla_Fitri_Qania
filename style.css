@@ -234,6 +234,12 @@ h1, h2, h3, .navbar-brand {
     transition: all 0.3s ease;
 }
 
+select.custom-input {
+    height: auto !important; /* Memaksa boks memperluas tingginya sesuai padding */
+    padding: 10px 12px !important; /* Menyeimbangkan padding atas-bawah dan kiri-kanan */
+    line-height: 1.5; /* Memastikan jarak baris teks normal */
+}
+
 .custom-input:focus {
     border-color: var(--pastel-pink);
     box-shadow: 0 0 0 3px rgba(255, 183, 197, 0.25);

@@ -162,7 +162,7 @@ h1, h2, h3, .navbar-brand {
 }
 
 /* ==========================================================================
-   5. 💥 HIGH-INTENSITY INTERACTION & FULL HOVER EFFECTS 💥
+   5. HIGH-INTENSITY INTERACTION & FULL HOVER EFFECTS
    ========================================================================== */
 
 /* --- A. HEADER, NAVIGATION & UTILITIES --- */
@@ -309,14 +309,15 @@ body.dark-theme .bg-light-pink-smooth:hover {
   object-fit: cover; 
 }
 
+/* === BAGIAN YANG DIPERKECIL SESUAI PERMINTAAN === */
 .bg-blur-gradient { 
   background: linear-gradient(45deg, rgba(255, 107, 139, 0.8), rgba(0, 180, 216, 0.8)); 
   backdrop-filter: blur(8px); 
-  border-radius: 16px; 
-  padding: 20px 30px; 
-  bottom: 35px; 
-  width: 84%; 
-  left: 8%; 
+  border-radius: 12px; 
+  padding: 12px 20px; 
+  bottom: 25px; 
+  width: 60%; 
+  left: 20%; 
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -614,4 +615,12 @@ body.dark-theme .custom-footer {
   .hero-title { font-size: 1.9rem; } 
   .carousel-img { height: 230px; } 
   .live-alert-toast { right: 25px; left: 25px; bottom: 15px; } 
+  
+  /* Penyesuaian responsif khusus HP agar teks caption tidak terpotong */
+  .bg-blur-gradient {
+    width: 80% !important;
+    left: 10% !important;
+    padding: 8px 15px !important;
+    bottom: 15px !important;
+  }
 }

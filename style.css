@@ -32,7 +32,6 @@ body.dark-theme {
   --filter-btn-bg: #334155;
 }
 
-/* Dark Mode Overrides - Cards & Containers */
 body.dark-theme .bg-white,
 body.dark-theme .card,
 body.dark-theme .contact-info-card,
@@ -43,7 +42,6 @@ body.dark-theme .carousel-inner {
   color: var(--text-dark) !important;
 }
 
-/* Dark Mode Overrides - Typography Heading (Solid White) */
 body.dark-theme .text-dark, 
 body.dark-theme .card-title,
 body.dark-theme h1, 
@@ -57,7 +55,6 @@ body.dark-theme .accordion-btn-effect {
   color: #ffffff !important; 
 }
 
-/* Dark Mode Overrides - Typography Body & Labels (Light Slate Gray) */
 body.dark-theme .text-muted, 
 body.dark-theme .card-body p,
 body.dark-theme label,
@@ -67,7 +64,6 @@ body.dark-theme .card-body {
   color: var(--text-muted-custom) !important; 
 }
 
-/* Dark Mode Overrides - Elements & Components */
 body.dark-theme .custom-navbar { 
   background-color: var(--navbar-bg) !important; 
 }
@@ -117,7 +113,6 @@ h1, h2, h3, .navbar-brand {
   min-height: 80vh; 
 }
 
-/* Typography Gradients */
 .text-pink-gradient { 
   background: linear-gradient(45deg, #ff6b8b, #00b4d8); 
   -webkit-background-clip: text; 
@@ -134,7 +129,6 @@ h1, h2, h3, .navbar-brand {
 /* ==========================================================================
    4. LAYOUT COMPONENTS (NAVBAR, PROMO BANNER)
    ========================================================================== */
-/* Promo Banner */
 .promo-banner { 
   background: linear-gradient(90deg, #ff6b8b, #00b4d8, #ff6b8b); 
   background-size: 200% auto; 
@@ -148,7 +142,6 @@ h1, h2, h3, .navbar-brand {
   100% { background-position: 200% 50%; } 
 }
 
-/* Navbar Base */
 .custom-navbar { 
   padding: 15px 0; 
   box-shadow: 0 4px 20px rgba(255, 183, 197, 0.15); 
@@ -309,7 +302,6 @@ body.dark-theme .bg-light-pink-smooth:hover {
   object-fit: cover; 
 }
 
-/* === BAGIAN YANG DIPERKECIL SESUAI PERMINTAAN === */
 .bg-blur-gradient { 
   background: linear-gradient(45deg, rgba(255, 107, 139, 0.8), rgba(0, 180, 216, 0.8)); 
   backdrop-filter: blur(8px); 
@@ -616,11 +608,71 @@ body.dark-theme .custom-footer {
   .carousel-img { height: 230px; } 
   .live-alert-toast { right: 25px; left: 25px; bottom: 15px; } 
   
-  /* Penyesuaian responsif khusus HP agar teks caption tidak terpotong */
   .bg-blur-gradient {
     width: 80% !important;
     left: 10% !important;
     padding: 8px 15px !important;
     bottom: 15px !important;
+  }
+}
+
+/* ==========================================================================
+   8. TENTANG PAGE CARDS & INTERACTIVE ICON ANIMATION
+   ========================================================================== */
+.about-card {
+  background-color: var(--card-bg);
+  border: 2px solid rgba(255, 183, 197, 0.2) !important;
+  border-radius: 24px !important;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+body.dark-theme .about-card {
+  border: 2px solid rgba(51, 65, 85, 0.5) !important;
+}
+
+/* Hover Card: Sedikit mengangkat ke atas dan memperbesar skala */
+.about-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  border-color: var(--bright-pink) !important;
+}
+
+/* Desain Lingkaran Wadah Ikon */
+.about-icon-wrapper {
+  width: 75px;
+  height: 75px;
+  background: var(--pink-blue-grad);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 8px 20px rgba(255, 107, 139, 0.25);
+  transition: all 0.4s ease;
+}
+
+.about-icon {
+  font-size: 2.2rem;
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+
+/* Hover State pada Wadah Ikon: Membalikkan gradasi warna */
+.about-card:hover .about-icon-wrapper {
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #ff6b8b 100%);
+  box-shadow: 0 12px 25px rgba(0, 180, 216, 0.4);
+}
+
+/* Animasi Putar Goyang Berkelanjutan (Continuous Wiggle) saat Hover */
+.about-card:hover .about-icon {
+  animation: iconWiggle 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes iconWiggle {
+  0% {
+    transform: rotate(-15deg) scale(1.25);
+  }
+  100% {
+    transform: rotate(15deg) scale(1.25);
   }
 }

@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
     $('[data-toggle="popover"]').popover();
 
     // === FITUR BARU 1: AUDIO SOUND EFFECT SYSTEM WITHOUT ASSETS ===
-    // Menggunakan Web Audio API internal browser (Tidak butuh download file mp3 eksternal!)
     let isSoundEnabled = false;
     const soundToggleBtn = document.getElementById('soundToggle');
     const soundIcon = document.getElementById('soundIcon');
@@ -142,7 +141,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // Hapus kelas aktif dari tombol filter lama
             filterButtons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
 
@@ -152,7 +150,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 const itemCategory = card.getAttribute('data-category');
                 if (selectedFilter === 'all' || itemCategory === selectedFilter) {
                     card.style.display = 'block';
-                    // Tambahkan animasi mikro saat render ulang
                     card.style.animation = 'smoothFadeIn 0.4s ease';
                 } else {
                     card.style.display = 'none';

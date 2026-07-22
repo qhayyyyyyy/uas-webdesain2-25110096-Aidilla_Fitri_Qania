@@ -44,18 +44,3 @@ Website ini terdiri dari halaman-halaman utama sebagai berikut:
   * *Form Validasi JavaScript (Validasi input sebelum form kontak dikirim)*
 
 ---
-
-## 📂 Struktur Direktori Project
-```text
-uas-webdesain2-25110096-Aidilla_Fitri_Qania/
-├── index.html
-├── about.html
-├── produk.html
-├── kontak.html
-├── README.md
-├── css/
-│   └── style.css
-├── js/
-│   └── main.js
-└── img/
-    └── [file-gambar-produk-atau-aset.png/.jpg]
